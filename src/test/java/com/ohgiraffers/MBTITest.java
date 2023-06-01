@@ -24,7 +24,7 @@ public class MBTITest {
     @Test
     public void testFT() {
         //given
-        int answer1 = 1;
+        int answer1 = 2;
         String result1 = this.FTq.question(answer1);
         String resultN=this.NSq.question(answer1);
 
