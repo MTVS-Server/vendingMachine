@@ -42,6 +42,27 @@ public class MBTITest {
         //when
         Assertions.assertThrows(
                 IllegalArgumentException.class,
-                ()-> this.FTq.question(answer));
+                () -> this.FTq.question(answer));
+    }
+
+    @DisplayName("I/E 테스트")
+    @Test
+    public void testJudgeIE() {
+        int answer1 = 1;
+        int answer2 = 2;
+
+        Assertions.assertEquals("E", this.IEq.checkNumbers(answer1));
+        Assertions.assertEquals("I", this.IEq.checkNumbers(answer2));
+    }
+
+    @DisplayName("그 외 번호를 입력하면 IllegalArgumentException가 발생하는지 체크")
+    @Test
+    public void testInputException() {
+        int answer = 3;
+
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> this.IEq.checkNumbers(answer)
+        );
     }
 }
