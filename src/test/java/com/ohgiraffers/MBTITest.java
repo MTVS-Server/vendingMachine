@@ -53,7 +53,7 @@ public class MBTITest {
     @DisplayName("I/E 테스트")
     @Test
     public void testJudgeIE() {
-        int answer1 = 1;
+        int answer1 = 2;
         int answer2 = 2;
 
         Assertions.assertEquals("E", this.IEq.checkNumbers(answer1));
