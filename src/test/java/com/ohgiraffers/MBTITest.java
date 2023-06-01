@@ -26,12 +26,17 @@ public class MBTITest {
         //given
         int answer1 = 1;
         String result1 = this.FTq.question(answer1);
+        String resultN=this.NSq.question(answer1);
 
         int answer2 = 2;
         String result2 = this.FTq.question(answer2);
+        String resultF=this.NSq.question(answer2);
+
         //when
         Assertions.assertEquals("F", result1);
         Assertions.assertEquals("T", result2);
+        Assertions.assertEquals("N", resultN);
+        Assertions.assertEquals("S", resultF);
     }
 
     @DisplayName("그외 번호를 입력하면 IllegalArgumentException가 발생하는지 체크")

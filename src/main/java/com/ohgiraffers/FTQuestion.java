@@ -3,7 +3,6 @@ package com.ohgiraffers;
 public class FTQuestion {
 
     public String question(int num){
-        System.out.println(num);
         if (num == 1) {
             return "F";
         } else if(num ==2){
