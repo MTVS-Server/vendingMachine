@@ -14,13 +14,13 @@ public class Main {
         int answerFT = 1;
         int answerPJ = 2;
 
-        String resultIE = IE.question(answerIE);
+        IE.judgeIE();
         String resultNS = NS.question(answerNS);
         String resultFT = FT.question(answerFT);
         String resultPJ = PJ.question(answerPJ);
 
 
-        String MBTI = resultIE + resultNS + resultFT + resultPJ;
+        String MBTI = "I" + resultNS + resultFT + resultPJ;
 
         System.out.println(MBTI);
     }
