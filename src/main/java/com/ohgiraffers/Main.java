@@ -19,6 +19,7 @@ public class Main {
         String resultFT = FT.question(answerFT);
         String resultPJ = PJ.question(answerPJ);
 
+
         String MBTI = resultIE + resultNS + resultFT + resultPJ;
 
         System.out.println(MBTI);
