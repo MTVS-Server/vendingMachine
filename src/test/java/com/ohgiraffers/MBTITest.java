@@ -70,4 +70,33 @@ public class MBTITest {
                 () -> this.IEq.checkNumbers(answer)
         );
     }
+
+    @DisplayName("MBTI P/J 테스트")
+    @Test
+    public void testPJ() {
+        // given
+        int answer1 = 1;
+        int answer2 = 2;
+
+        // when
+        String result1 = this.PJq.question(answer1);
+        String result2 = this.PJq.question(answer2);
+
+        // then
+        Assertions.assertEquals("P", result1);
+        Assertions.assertEquals("J", result2);
+    }
+
+    @DisplayName("선택지 외 번호 입력 시 확인")
+    @Test
+    public void setPJInputArgument() {
+        // given
+        int answer = 0;
+
+        // when & then
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                ()-> this.PJq.question(answer)
+        );
+    }
 }
